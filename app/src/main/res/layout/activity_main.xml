@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/symptomsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Symptoms"
+        android:textSize="18sp"
+        android:backgroundTint="?android:attr/colorAccent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/uploadSignsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Upload Signs"
+        android:textSize="18sp"
+        android:backgroundTint="?android:attr/colorAccent"
+        app:layout_constraintTop_toBottomOf="@id/symptomsButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/heartRateTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="444dp"
+        android:text="Heart Rate: 0.000 bpm"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/uploadSignsButton" />
+
+    <Button
+        android:id="@+id/measureHeartRateButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Measure Heart Rate"
+        android:textSize="18sp"
+        android:backgroundTint="?android:attr/colorAccent"
+        app:layout_constraintTop_toBottomOf="@id/heartRateTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/respiratoryRateTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Respiratory Rate: 0.000 breaths/minute"
+        android:textSize="20sp"
+        android:textColor="?android:textColorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/measureHeartRateButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/measureRespiratoryRateButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Measure Respiratory Rate"
+        android:textSize="18sp"
+        android:backgroundTint="?android:attr/colorAccent"
+        app:layout_constraintTop_toBottomOf="@id/respiratoryRateTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/loadingProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="436dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/measureRespiratoryRateButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
